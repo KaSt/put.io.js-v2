@@ -55,7 +55,7 @@ Transfers
 =========
 
 	api.transfers.list(callback);
-	api.transfers.add(url, parent_id=0, extract=false, callback=noop);
+	api.transfers.add(url, parent_id=0, extract=false, callback_url='', callback=noop);
 	api.transfers.get(id, callback=noop);
 	api.transfers.cancel(transfer_ids, callback=noop); //accepts transfer_ids in the form of "1,2,3" or [1,2,3], or just 1
 
