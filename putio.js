@@ -122,12 +122,14 @@ var PutIO = function(token){
 		
 		get('transfers/list', callback);
 	};
-	this.transfers.add = function(path, parent_id, extract, callback){
+	this.transfers.add = function(path, parent_id, extract, callback_url, callback){
 		need(path);
 		parent_id = def(parent_id, 0);
 		extract = def(extract, false);
+		callback_url = def(callback_url, '');
 		
-		post('transfers/add', {'url': path, 'save_parent_id': parent_id, 'extract': extract}, callback);
+		post('transfers/add', {'url': path, 'save_parent_id': parent_id, 
+			'extract': extract, 'callback_url': callback_url}, callback);
 	};
 	this.transfers.get = function(id, callback){
 		need(id);
